@@ -1,6 +1,5 @@
 package me.redbean88.standAlone.web.dto;
 
-import lombok.Builder;
 import lombok.Getter;
 import me.redbean88.standAlone.domain.posts.Posts;
 

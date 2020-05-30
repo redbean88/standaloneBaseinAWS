@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import me.redbean88.standAlone.domain.posts.Posts;
 
-import javax.persistence.Entity;
-
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestDto {
