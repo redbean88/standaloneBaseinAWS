@@ -1,0 +1,24 @@
+language: java
+jdk:
+  -openjdk8
+
+branches:
+  only:
+    - master # 어느 브렌치에 push 될때 처리되는지
+
+
+# Travis CI 서버의 home
+# 캐시를 이용 같은 의존성은 받지 않도록 처리
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+
+# 푸시시 수행될 job
+script: "./gradlew clean build"
+
+# CI 실행 완료시 메일 알림
+notifications:
+  email:
+    recipients:
+      - doctortor88@gmail.com
