@@ -21,6 +21,24 @@ script: "./gradlew clean build"
 before_install:
   - chmod +x gradlew
 
+# Jar2Zip
+before_deploy:
+  - zip -r standaloneBaseinAWS
+  - mkdir -p deploy
+  - mv standaloneBaseinAWS.zip deploy/standaloneBaseinAWS.zip
+
+# 배포
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY # Travis setting value
+  secret_access_key: $AWS_SECRET_KEY  # Travis setting value
+  bucket: redbean88-springboot-build
+  region: ap-northeast-2
+  skip_cleanup: true
+  acl: private # zip 접근 제어자
+  local_dir: deploy # 배포파일 위치
+  wait-until-deployed: ture
+
 # CI 실행 완료시 메일 알림
 notifications:
   email:
