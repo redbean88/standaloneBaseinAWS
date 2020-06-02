@@ -37,7 +37,7 @@ deploy:
   skip_cleanup: true
   acl: private # zip 접근 제어자
   local_dir: deploy # 배포파일 위치
-  wait-until-deployed: ture
+  wait-until-deployed: true
 
 # CI 실행 완료시 메일 알림
 notifications:
