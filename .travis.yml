@@ -19,7 +19,7 @@ script: "./gradlew clean build"
 
 # job 실행시 실행권한 주기
 before_install:
-  - chomod +x gredlew
+  - chmod +x gradlew
 
 # CI 실행 완료시 메일 알림
 notifications:
