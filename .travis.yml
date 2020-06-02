@@ -23,7 +23,7 @@ before_install:
 
 # Jar2Zip
 before_deploy:
-  - zip -r standaloneBaseinAWS
+  - zip -r standaloneBaseinAWS *
   - mkdir -p deploy
   - mv standaloneBaseinAWS.zip deploy/standaloneBaseinAWS.zip
 
