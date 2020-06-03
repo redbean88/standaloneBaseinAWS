@@ -38,7 +38,7 @@ deploy:
     acl: private # zip 접근 제어자
     local_dir: deploy # 배포파일 위치
     wait-until-deployed: true
-
+    
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
