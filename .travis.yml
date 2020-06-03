@@ -1,6 +1,6 @@
 language: java
 jdk:
-  -openjdk8
+  - openjdk8
 
 branches:
   only:
@@ -48,6 +48,7 @@ deploy:
     application: redbean-springboot2-webservice # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
     deployment_group: redbean88-springboot2-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
     region: ap-northeast-2
+    wait-until-deployed: true
 
 # CI 실행 완료시 메일 알림
 notifications:
