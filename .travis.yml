@@ -36,7 +36,7 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # Travis setting value
     secret_access_key: $AWS_SECRET_KEY  # Travis setting value
-    bucket: redbean88-springboot-build
+    bucket: redbean88-springboot-build2
     region: us-east-2
     skip_cleanup: true
     acl: private # zip 접근 제어자
@@ -49,7 +49,7 @@ deploy:
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
-    bucket: redbean88-springboot-build # S3 버킷
+    bucket: redbean88-springboot-build2 # S3 버킷
     key: standaloneBaseinAWS.zip # 빌드 파일을 압축해서 전달
     bundle_type: zip
     application: redbean88-springboot2-webservice # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
